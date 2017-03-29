@@ -42,9 +42,9 @@ while i < len(sys.argv):
 k = 1.2
 b = 0.75
 rank_num = 100
-t_weight = float(sys.argv[len(sys.argv) - 3])
-q_weight = float(sys.argv[len(sys.argv) - 2])
-n_weight = float(sys.argv[len(sys.argv) - 1])
+t_weight = float(sys.argv[len(sys.argv) - 2])
+q_weight = float(sys.argv[len(sys.argv) - 1])
+
 # Important Variable
 avg_wordcount = 0
 
@@ -153,8 +153,6 @@ for q in query_list:
 	    weight *= t_weight	    
 	if word in q[2]:
 	    weight *= q_weight
-	if word in q[3]:
-	    weight *= n_weight
 	word1 = word[0]
 	word2 = word[1]
 	if (not word1 in vocab_vocabID) or (not word2 in vocab_vocabID):
